@@ -63,25 +63,27 @@ function camelC(Event) {
 
 
 function capt(array) {
- let aux = array.split("\n");
- let object = {};
- let auxvar = [];
- let j = 0;
- let a = "";
- for(let i = 0; i < aux.length; i++){
-   object[j] = aux[i];
-   j++;
+ let aux = [];
+ let auxvariable = "";
+ let j = [];
+ aux.push(array);
+ for(let i = 0; i < aux[0].length; i++){
+    if(i === 0){
+      j.push((aux[0][0].toUpperCase()));
+      i++;
+    }
+      if(aux[0][i] === " " || aux[0][i] === "\n"){
+        j.push(aux[0][i]);
+        j.push((aux[0][i+1].toUpperCase()));
+        i++;
+      }else{
+        j.push((aux[0][i]).toLowerCase());
+        }
+  }
+ for(let i = 0; i < j.length; i++){
+   auxvariable += j[i];
  }
- for(let i = 0; i < j; i++){
-   a+= object[i][0].toUpperCase();
-       console.log(object[i].length);
-     auxvar.push(object[i]);
-     
-     a+=object[i];
- }
- console.log(object);
- console.log(a)
-  return array;
+  return auxvariable;
 }
 
 function camel(text) {
