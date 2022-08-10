@@ -20,7 +20,7 @@ textarea{
    border-radius:6px;
 
 }
-textarea:focus{
+textarea:active{
 	outline:1px solid red;
 }
 input{
