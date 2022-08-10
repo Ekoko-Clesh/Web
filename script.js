@@ -151,12 +151,6 @@ function totalOfWords(word) {
 }
 
 function totalOfLines(word) {
-  var lin = [];
-var aux = word.split("\n");
-for(let i = 0; i < aux.length; i++){
-  if(aux[i] !== ""){
-    lin.push(aux[i]);
-  }
-}
- return lin.length;
+  var aux = word.split("\n");
+  return aux.length;
 }
